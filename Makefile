@@ -5,7 +5,7 @@ endif
 ALL :=  dev-utils \
 	ripgrep \
 	go godef goimports \
-	docker-edge qemu \
+	docker-edge kvm-gtk \
 	jrePlugin
 
 .PHONY: all

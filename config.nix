@@ -4,7 +4,7 @@
 
     dev-utils = callPackage ./utils {};
 
-    qemu = pkgs.qemu.overrideDerivation (attrs: {
+    kvm-gtk = pkgs.qemu.overrideDerivation (attrs: {
       buildInputs = attrs.buildInputs ++ [ gtk3 gtk3.dev gettext ];
       configureFlags = attrs.configureFlags ++ [ "--enable-gtk" "--target-list=x86_64-softmmu" ];
       postInstall = attrs.postInstall + ''
