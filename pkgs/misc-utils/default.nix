@@ -1,7 +1,7 @@
 {stdenv}:
 
 stdenv.mkDerivation rec {
-  name = "dev-utils";
+  name = "misc-utils";
   src = ./.;
   installPhase = ''
     install -dm 755 $out/bin

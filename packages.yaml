@@ -1,0 +1,68 @@
+languages:
+  - aspell
+  - aspellDicts.en
+development:
+  - binutils
+  - cscope
+  - cscope-indexer
+  - cloc
+  - bc
+  - gdb
+  - file
+  - meld
+  - screen
+  - ripgrep
+packages:
+  - rpm
+haskell:
+  - cabal2nix
+virtualization:
+  - docker
+  - kvm
+misc:
+  - dotfiles
+  - misc-utils
+storage:
+  - dropbox-cli
+  - ncdu
+  - unrar
+  - unzip
+  - smartmontools
+  - sqlite
+documents:
+  - evince
+  - feh
+  - ghostscript
+  - poppler_utils
+  - jq
+web:
+  - curl
+  - firefox
+  - google-chrome
+system:
+  - strace
+  - htop
+  - dstat
+  - iotop
+  - psmisc
+  - inotify-tools
+  - lsof
+  - pciutils
+  - pv
+  - ipmitool
+  - tcpdump
+python:
+  - python27Packages.ipython
+  - gcp
+rust:
+  - rustup
+torrents:
+  - transmission-gtk
+video:
+  - vlc
+X11:
+  - xorg.xhost
+  - xorg.xtrans
+communication:
+  - slack
+  - zoom-us

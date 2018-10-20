@@ -2,7 +2,10 @@
   allowUnfree = true;
   packageOverrides = pkgs: with pkgs; rec {
 
-    dev-utils = callPackage ./utils {};
+    misc-utils = callPackage ./pkgs/misc-utils {};
+    dotfiles = callPackage ./pkgs/dotfiles {};
+    gcp = callPackage ./pkgs/gcp {};
+    cscope-indexer = callPackage ./pkgs/cscope-indexer {};
 
     kvm-gtk = pkgs.qemu.overrideDerivation (attrs: {
       buildInputs = attrs.buildInputs ++ [ gtk3 gtk3.dev gettext ];
