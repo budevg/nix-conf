@@ -12,6 +12,7 @@ development:
   - meld
   - screen
   - ripgrep
+  - git-lfs
 packages:
   - rpm
 haskell:
@@ -66,3 +67,5 @@ X11:
 communication:
   - slack
   - zoom-us
+printer:
+  - system-config-printer
