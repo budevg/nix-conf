@@ -69,3 +69,5 @@ communication:
   - zoom-us
 printer:
   - system-config-printer
+sound:
+  - pavucontrol
