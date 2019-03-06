@@ -6,6 +6,7 @@
     dotfiles = callPackage ./pkgs/dotfiles {};
     gcp = callPackage ./pkgs/gcp {};
     cscope-indexer = callPackage ./pkgs/cscope-indexer {};
+    autopatchelf = callPackage ./pkgs/autopatchelf {};
 
     kvm-gtk = pkgs.qemu.overrideDerivation (attrs: {
       buildInputs = attrs.buildInputs ++ [ gtk3 gtk3.dev gettext ];
