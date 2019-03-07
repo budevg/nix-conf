@@ -5,6 +5,7 @@
     [
       ./desktop.nix
       ./devices.nix
+      ./env.nix
       ./grub.nix
       ./hardware-configuration.nix
       ./network.nix
