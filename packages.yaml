@@ -55,6 +55,7 @@ system:
 python:
   - python27Packages.ipython
   - gcp
+  - python27Packages.pylint
 rust:
   - rustup
 torrents:
