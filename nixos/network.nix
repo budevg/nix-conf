@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "evgenyb-e8";
+    hostName = "evgenyb-dev";
     networkmanager.enable = true;
     firewall = {
       enable = true;
