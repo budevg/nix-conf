@@ -1,3 +1,6 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i python -p python27Packages.pyyaml
+
 import yaml
 
 def install_cmd(pkgs, dry_run=True):
