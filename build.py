@@ -2,6 +2,7 @@
 #! nix-shell -i python -p python27Packages.pyyaml
 
 import yaml
+import os
 
 def install_cmd(pkgs, dry_run=True):
     res = "nix-env -i %s" % " ".join(("-A nixos.%s" % p for p in pkgs))
@@ -10,8 +11,9 @@ def install_cmd(pkgs, dry_run=True):
     return res
 
 def main():
+    packages_path = os.path.join(os.path.dirname(__file__),"packages.yaml")
     all_pkgs = []
-    cfg = yaml.load(open("packages.yaml").read())
+    cfg = yaml.load(open(packages_path).read())
     for name, pkgs in cfg.iteritems():
         all_pkgs.extend(pkgs)
         print "echo %s" % name, ";", install_cmd(pkgs)
