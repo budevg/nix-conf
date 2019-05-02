@@ -13,6 +13,7 @@ development:
   - screen
   - ripgrep
   - git-lfs
+  - manpages
 packages:
   - rpm
 haskell:
