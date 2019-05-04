@@ -24,3 +24,4 @@ PATH=$HOME/.local/bin:$HOME/tools/bin:$PATH
 export TMPDIR=$HOME/scratch
 
 export PS1="\u@\h:\w\$ "
+export NIX_PATH="$NIX_PATH:nixpkgs-overlays=$HOME/.nixpkgs/overlays"
