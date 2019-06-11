@@ -68,7 +68,6 @@ X11:
   - xorg.xtrans
 communication:
   - slack
-  - zoom-us
 printer:
   - system-config-printer
 sound:
