@@ -7,6 +7,8 @@ stdenv.mkDerivation {
     pkgconfig
     autoconf
     gcc
+    stack
+    gmp
     xorg.libX11
     xorg.libXext
     xorg.libXft
