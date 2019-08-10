@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
     cp -r $src/files/. $out/dotfiles
     cat << "EOF" > $out/bin/dotfiles_update.sh
     #!${bash}/bin/bash
-    for f in `find /home/evgenyb/.nix-profile/dotfiles/ -type f`; do
+    for f in `find ~/.nix-profile/dotfiles/ -type f`; do
       DST=$HOME/''${f#*/dotfiles/}
       (set -x; mkdir -p `dirname $DST`; ln -s $f $DST)
     done
