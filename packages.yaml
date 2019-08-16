@@ -3,8 +3,7 @@ languages:
   - aspellDicts.en
 development:
   - binutils
-  - cscope
-  - cscope-indexer
+  - global
   - cloc
   - bc
   - gdb
