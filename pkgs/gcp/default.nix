@@ -4,11 +4,11 @@
 with pkgs.python3Packages;
 buildPythonPackage rec {
   pname = "gcp";
-  version = "0.2.0";
+  version = "0.2.1";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0d8f4acd2c766a40157d52438232ec58da30030807b6b4a768772cb13c30fd2a";
+    sha256 = "b6c70d54f8f4f9ffe565b92425389a790dadba0d9aca5852ff4ac13cd412b23a";
   };
 
   propagatedBuildInputs = [ pygobject3 dbus-python progressbar33 ];
