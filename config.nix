@@ -7,11 +7,6 @@
     gcp = callPackage ./pkgs/gcp {};
     cscope-indexer = callPackage ./pkgs/cscope-indexer {};
     autopatchelf = callPackage ./pkgs/autopatchelf {};
-    ghidra =
-      let
-        unstable = import <unstable> {};
-      in
-        callPackage ./pkgs/ghidra {openjdk11 = unstable.openjdk11;};
 
     kvm-gtk = pkgs.qemu.overrideDerivation (attrs: {
       buildInputs = attrs.buildInputs ++ [ gtk3 gtk3.dev gettext ];
