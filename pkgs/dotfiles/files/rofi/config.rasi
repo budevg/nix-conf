@@ -1,0 +1,15 @@
+/* -*- mode: css -*- */
+
+configuration {
+    lines: 5;
+    fixed-num-lines: false;
+    display-combi: "Cmd";
+    combi-modi: "drun,extra";
+    combi-hide-mode-prefix: true;
+    modi: "combi,drun,extra:~/.config/rofi/extra.sh";
+    show-icons: true;
+    icon-theme: "elementary-xfce";
+    drun-match-fields: "name";
+    matching: "fuzzy";
+    theme: "~/.nix-profile/share/rofi/themes/Monokai.rasi";
+}

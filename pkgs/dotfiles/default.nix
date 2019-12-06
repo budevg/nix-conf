@@ -13,6 +13,7 @@ stdenv.mkDerivation rec {
       DST=$HOME/''${f#*/dotfiles/}
       (set -x; mkdir -p `dirname $DST`; ln -s $f $DST)
     done
+    ln -s ~/.nix-profile/dotfiles/rofi ~/.config/rofi
     EOF
     chmod +x $out/bin/dotfiles_update.sh
   '';

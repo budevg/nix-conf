@@ -13,8 +13,6 @@ development:
   - ripgrep
   - git-lfs
   - manpages
-packages:
-  - rpm
 haskell:
   - cabal2nix
 virtualization:
@@ -52,6 +50,7 @@ system:
   - pv
   - ipmitool
   - tcpdump
+  - rofi
 python:
   - python27Packages.ipython
   - gcp
@@ -71,3 +70,5 @@ printer:
   - system-config-printer
 sound:
   - pavucontrol
+nix:
+  - nixfmt
