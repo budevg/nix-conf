@@ -2,8 +2,6 @@
   allowUnfree = true;
   packageOverrides = pkgs: with pkgs; rec {
 
-    misc-utils = callPackage ./pkgs/misc-utils {};
-    dotfiles = callPackage ./pkgs/dotfiles {};
     gcp = callPackage ./pkgs/gcp {};
     cscope-indexer = callPackage ./pkgs/cscope-indexer {};
     autopatchelf = callPackage ./pkgs/autopatchelf {};

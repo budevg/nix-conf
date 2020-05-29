@@ -11,6 +11,7 @@
       ./network.nix
       ./system.nix
       ./users.nix
+      ./laptop.nix
     ];
 
   nixpkgs.config.allowUnfree = true;

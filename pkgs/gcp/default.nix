@@ -12,7 +12,8 @@ buildPythonPackage rec {
   };
 
   propagatedBuildInputs = [ pygobject3 dbus-python progressbar33 ];
-  installFlags = "--no-dependencies";
+  pipInstallFlags = "--no-dependencies";
+  dontUseSetuptoolsCheck = true;
   checkPhase = ''
   '';
 
