@@ -10,6 +10,7 @@
     pkgs.jq
     (pkgs.aspellWithDicts (d: [ d.en ]))
     pkgs.gcp
+    pkgs.emacs-libvterm
   ];
 
   programs.git = {

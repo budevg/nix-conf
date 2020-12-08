@@ -3,6 +3,7 @@
   packageOverrides = pkgs: with pkgs; rec {
 
     gcp = callPackage ./pkgs/gcp {};
+    emacs-libvterm = callPackage ./pkgs/emacs-libvterm {};
     cscope-indexer = callPackage ./pkgs/cscope-indexer {};
     autopatchelf = callPackage ./pkgs/autopatchelf {};
 
