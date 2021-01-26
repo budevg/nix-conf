@@ -27,6 +27,9 @@
       c = "clean -fdxn";
       cc = "clean -fdx";
     };
-    extraConfig = { core.pager = "cat"; };
+    extraConfig = {
+      core.pager = "cat";
+      rebase.autosquash = true;
+    };
   };
 }
