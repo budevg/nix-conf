@@ -1,5 +1,6 @@
 {
   allowUnfree = true;
+  # android_sdk.accept_license = true;
   packageOverrides = pkgs: with pkgs; rec {
 
     gcp = callPackage ./pkgs/gcp {};
