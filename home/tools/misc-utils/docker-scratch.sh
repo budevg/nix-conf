@@ -4,6 +4,7 @@ set -x
 
 USERNAME=`id -nu`
 DOCKER_DATA=`readlink -f ~/scratch/docker`
+DEFAULT_DOCKER_SOCK="/var/run/docker.sock"
 # STORAGE=devicemapper
 # STORAGE_OPTS="--storage-opt dm.basesize=20G"
 STORAGE=overlay
@@ -24,3 +25,6 @@ fi
 sudo PATH=$PATH screen -d -m dockerd --experimental -g $DOCKER_DATA -H unix://$DOCKER_DATA.sock -p $DOCKER_DATA.pid -s $STORAGE $STORAGE_OPTS $*
 sleep 5
 sudo chown $USERNAME:$USERNAME $DOCKER_DATA.sock
+sudo umount $DEFAULT_DOCKER_SOCK || true
+sudo touch $DEFAULT_DOCKER_SOCK
+sudo mount -o bind $DOCKER_DATA.sock $DEFAULT_DOCKER_SOCK
