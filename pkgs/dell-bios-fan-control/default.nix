@@ -9,6 +9,7 @@ stdenv.mkDerivation {
     sha256 = "1d1cc4j6cz900mcf55kqfywzddv809yp0lsfwg8j890bv1s7riwa";
   };
 
+  NIX_CFLAGS_COMPILE="-O0";
   installPhase = ''
     mkdir -p $out/bin
     cp dell-bios-fan-control $out/bin
