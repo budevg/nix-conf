@@ -7,7 +7,7 @@
     wget vim git bash axel python tightvnc
 
     trayer networkmanagerapplet polkit_gnome
-    xdg-user-dirs xcompmgr synapse
+    xdg-user-dirs xcompmgr
     greybird elementary-xfce-icon-theme
     xorg.setxkbmap libnotify xfce.dconf vanilla-dmz
 
