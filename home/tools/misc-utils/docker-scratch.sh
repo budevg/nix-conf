@@ -2,8 +2,9 @@
 
 set -x
 
+ROOT=`readlink -f ${1-~/scratch}`
 USERNAME=`id -nu`
-DOCKER_DATA=`readlink -f ~/scratch/docker`
+DOCKER_DATA="$ROOT/docker"
 DEFAULT_DOCKER_SOCK="/var/run/docker.sock"
 # STORAGE=devicemapper
 # STORAGE_OPTS="--storage-opt dm.basesize=20G"
@@ -13,7 +14,7 @@ STORAGE_OPTS=""
 
 if [ ! -d $DOCKER_DATA ]
 then
-    mkdir $DOCKER_DATA
+    mkdir -p $DOCKER_DATA
 fi
 
 if [ -f $DOCKER_DATA.pid ]
