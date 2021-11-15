@@ -26,6 +26,7 @@
   };
 
   programs.git = {
+    lfs.enable = true;
     enable = true;
     userName = "user name";
     userEmail = "user@mail.com";
