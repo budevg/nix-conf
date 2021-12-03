@@ -1,7 +1,6 @@
 /* -*- mode: css -*- */
 
 configuration {
-    lines: 5;
     fixed-num-lines: false;
     display-combi: "Cmd";
     combi-modi: "drun,extra";
@@ -11,5 +10,5 @@ configuration {
     icon-theme: "elementary-xfce";
     drun-match-fields: "name";
     matching: "fuzzy";
-    theme: "~/.nix-profile/share/rofi/themes/Monokai.rasi";
+    theme: "~/.config/rofi/Monokai.rasi";
 }
