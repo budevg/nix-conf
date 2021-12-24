@@ -11,7 +11,19 @@
     (pkgs.aspellWithDicts (d: [ d.en ]))
     pkgs.gcp
     pkgs.emacs-libvterm
+    pkgs.libgccjit
   ];
+
+  home.file = {
+    "tools/bin/emacs" = {
+      text = ''
+        #!/bin/bash
+        export LIBRARY_PATH="${pkgs.lib.getLib pkgs.stdenv.cc.libc}/lib"
+        exec ~/projects/repos/apps/emacs-link/.build/src/emacs -rv $@
+      '';
+      executable = true;
+    };
+  };
 
   programs.git = {
     enable = true;
