@@ -6,8 +6,8 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "akermu";
     repo = "emacs-libvterm";
-    rev = "a670b786539d3c8865d8f68fe0c67a2d4afbf1aa";
-    sha256 = "0s244crjkbzl2jhp9m4sm1xdhbpxwph0m3jg18livirgajvdz6hn";
+    rev = "a940dd2ee8a82684860e320c0f6d5e15d31d916f";
+    sha256 = "0r1iz92sn2ddi11arr9s8z7cdpjli7pn55yhaswvp4sdch7chb5r";
   };
 
   nativeBuildInputs = [ cmake ];
@@ -15,7 +15,6 @@ stdenv.mkDerivation {
 
   installPhase = ''
     install -d $out/share/emacs/site-lisp
-    install ../*.el $out/share/emacs/site-lisp
     install ../*.so $out/share/emacs/site-lisp
   '';
 }
