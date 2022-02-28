@@ -35,6 +35,7 @@
         "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(magenta)<%an>%Creset' --abbrev-commit --date=relative";
       l = "log --no-merges";
       ll = "log --graph --date=short";
+      la = "shortlog -sne";
       fp = "format-patch -s";
       fpp = "format-patch -s --cover-letter";
       c = "clean -fdxn";
