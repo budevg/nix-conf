@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
-{
+let nixos-unstable = import <nixos-unstable> { };
+in {
   time.timeZone = "Asia/Jerusalem";
 
   environment.systemPackages = with pkgs; [
@@ -17,4 +18,10 @@
 
   programs.slock.enable = true;
 
+  nix = {
+    package = nixos-unstable.nixVersions.nix_2_7;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
 }
