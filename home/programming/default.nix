@@ -23,6 +23,7 @@
       '';
       executable = true;
     };
+    ".gdbinit".source = ./.gdbinit;
   };
 
   programs.git = {
