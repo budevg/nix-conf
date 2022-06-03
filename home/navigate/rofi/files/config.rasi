@@ -10,5 +10,6 @@ configuration {
     icon-theme: "elementary-xfce";
     drun-match-fields: "name";
     matching: "fuzzy";
-    theme: "~/.config/rofi/Monokai.rasi";
 }
+
+@theme "~/.config/rofi/Monokai.rasi"

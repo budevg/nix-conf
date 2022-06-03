@@ -2,7 +2,7 @@
 
 {
   home.packages = [
-    pkgs.kvm
+    pkgs.qemu_kvm
     pkgs.docker
     pkgs.screen
   ];

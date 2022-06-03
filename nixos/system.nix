@@ -9,7 +9,7 @@
     trayer networkmanagerapplet polkit_gnome
     xdg-user-dirs xcompmgr
     greybird elementary-xfce-icon-theme
-    xorg.setxkbmap libnotify xfce.dconf vanilla-dmz
+    xorg.setxkbmap libnotify dconf vanilla-dmz
 
     gcc automake autoconf gnumake
     ntfs3g
