@@ -3,6 +3,7 @@
   # android_sdk.accept_license = true;
   packageOverrides = pkgs: with pkgs; rec {
 
+    kmonad = callPackage ./pkgs/kmonad {};
     gcp = callPackage ./pkgs/gcp {};
     emacs-libvterm = callPackage ./pkgs/emacs-libvterm {};
     cscope-indexer = callPackage ./pkgs/cscope-indexer {};

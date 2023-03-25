@@ -10,6 +10,7 @@
     ./home/system
     ./home/tools
     ./home/virt
+    ./home/kbd
   ];
   programs.home-manager.enable = true;
   home.stateVersion = "20.03";
