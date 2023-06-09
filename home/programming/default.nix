@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
-{
+let
+  libGccJitLibraryPaths = [
+    "${pkgs.lib.getLib pkgs.libgccjit}/lib/gcc"
+    "${pkgs.lib.getLib pkgs.stdenv.cc.libc}/lib"
+    "${pkgs.lib.getLib pkgs.stdenv.cc.cc.libgcc}/lib"
+  ];
+in {
   home.packages = [
     pkgs.nixfmt
     pkgs.gdb
@@ -18,7 +24,9 @@
     "tools/bin/emacs" = {
       text = ''
         #!/bin/bash
-        export LIBRARY_PATH="${pkgs.lib.getLib pkgs.stdenv.cc.libc}/lib"
+        export LIBRARY_PATH="${
+          pkgs.lib.concatStringsSep ":" libGccJitLibraryPaths
+        }"
         exec ~/projects/repos/apps/emacs-link/.build/src/emacs -rv $@
       '';
       executable = true;
