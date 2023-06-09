@@ -4,7 +4,7 @@
   time.timeZone = "Asia/Jerusalem";
 
   environment.systemPackages = with pkgs; [
-    wget vim git bash axel python
+    wget vim git bash axel python3
 
     trayer networkmanagerapplet polkit_gnome
     xdg-user-dirs xcompmgr
