@@ -7,17 +7,20 @@ let
     "${pkgs.lib.getLib pkgs.stdenv.cc.cc.libgcc}/lib"
   ];
 in {
-  home.packages = [
-    pkgs.nixfmt
-    pkgs.gdb
-    pkgs.cloc
-    pkgs.meld
-    pkgs.pv
-    pkgs.jq
-    (pkgs.aspellWithDicts (d: [ d.en ]))
-    pkgs.gcp
-    pkgs.emacs-libvterm
-    pkgs.libgccjit
+  home.packages = with pkgs; [
+    nixfmt
+    gdb
+    cloc
+    meld
+    pv
+    jq
+    (aspellWithDicts (d: [ d.en ]))
+    gcp
+    emacs-libvterm
+    libgccjit
+    python3
+    binutils
+    git
   ];
 
   home.file = {
