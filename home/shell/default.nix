@@ -7,4 +7,5 @@
     ".dircolors".source = ./.dircolors;
     ".config/xfce4/terminal/terminalrc".source = ./terminalrc;
   };
+  home.packages = [ pkgs.zoxide ];
 }
