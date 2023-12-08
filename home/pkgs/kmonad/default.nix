@@ -1,5 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
-with pkgs;
+{ fetchurl, runCommand, stdenv }:
 let
   kmonad-bin = fetchurl {
     url =

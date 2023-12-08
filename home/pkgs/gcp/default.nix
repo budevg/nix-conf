@@ -1,7 +1,6 @@
-{ pkgs
-}:
+{ python3Packages }:
 
-with pkgs.python3Packages;
+with python3Packages;
 buildPythonPackage rec {
   pname = "gcp";
   version = "0.2.1";
@@ -14,12 +13,11 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ pygobject3 dbus-python progressbar33 ];
   pipInstallFlags = "--no-dependencies";
   dontUseSetuptoolsCheck = true;
-  checkPhase = ''
-  '';
+  checkPhase = "";
 
   meta = with pkgs.lib; {
     description = "An advanced file copy tool loosely inspired from cp";
-    homepage    = https://code.lm7.fr/mcy/gcp;
-    license     = licenses.gpl3;
+    homepage = "https://code.lm7.fr/mcy/gcp";
+    license = licenses.gpl3;
   };
 }

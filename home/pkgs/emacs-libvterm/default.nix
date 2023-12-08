@@ -1,5 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
-with pkgs;
+{ stdenv, fetchFromGitHub, cmake, libvterm-neovim }:
 stdenv.mkDerivation {
   name = "emacs-libvterm";
 

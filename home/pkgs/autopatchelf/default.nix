@@ -1,6 +1,4 @@
-{ pkgs ? import <nixpkgs> {}
-}:
-with pkgs;
+{ stdenv, file, getopt, patchelf }:
 stdenv.mkDerivation {
   name = "autopatchelf";
   buildCommand = ''

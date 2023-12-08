@@ -1,6 +1,4 @@
-{ pkgs ? import <nixpkgs> {}
-}:
-with pkgs;
+{ stdenv, cscope }:
 stdenv.mkDerivation {
   name = "cscope-indexer";
   buildInputs = [ cscope ];

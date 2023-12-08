@@ -11,6 +11,7 @@
     ./home/tools
     ./home/virt
     ./home/kbd
+    ./home/pkgs
   ];
   programs.home-manager.enable = true;
   home.stateVersion = "20.03";
