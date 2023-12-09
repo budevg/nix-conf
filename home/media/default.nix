@@ -4,6 +4,7 @@
   home.packages = [
     pkgs.vlc
     pkgs.simplescreenrecorder
+    pkgs.gromit-mpx
     pkgs.feh
     pkgs.unrar
     pkgs.unzip
