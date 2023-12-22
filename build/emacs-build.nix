@@ -33,7 +33,7 @@ in stdenv.mkDerivation {
     libxml2
     m17n_lib
     ncurses
-    pkgconfig
+    pkg-config
     sqlite
     systemd
     tree-sitter
