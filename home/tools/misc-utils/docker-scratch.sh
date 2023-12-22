@@ -8,7 +8,7 @@ DOCKER_DATA="$ROOT/docker"
 DEFAULT_DOCKER_SOCK="/var/run/docker.sock"
 # STORAGE=devicemapper
 # STORAGE_OPTS="--storage-opt dm.basesize=20G"
-STORAGE=overlay
+STORAGE=overlay2
 STORAGE_OPTS=""
 
 
@@ -23,7 +23,7 @@ then
     exit 1
 fi
 
-sudo PATH=$PATH screen -d -m dockerd --experimental -g $DOCKER_DATA -H unix://$DOCKER_DATA.sock -p $DOCKER_DATA.pid -s $STORAGE $STORAGE_OPTS
+sudo PATH=$PATH screen -d -m dockerd --experimental --data-root $DOCKER_DATA -H unix://$DOCKER_DATA.sock -p $DOCKER_DATA.pid -s $STORAGE $STORAGE_OPTS
 sleep 5
 sudo chown $USERNAME:$USERNAME $DOCKER_DATA.sock
 sudo umount $DEFAULT_DOCKER_SOCK || true
