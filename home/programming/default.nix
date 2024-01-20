@@ -20,7 +20,6 @@ in {
     libgccjit
     python3
     binutils
-    git
   ];
 
   home.file = {
@@ -56,6 +55,22 @@ in {
     extraConfig = {
       core.pager = "cat";
       rebase.autosquash = true;
+    };
+  };
+
+  programs.gh = {
+    enable = true;
+    settings = {
+      git_protocol = "ssh";
+      prompt = "disabled";
+      editor = "emacs";
+      pager = "cat";
+      aliases = {
+        pv = "pr view";
+        pl = "pr list";
+        iv = "issue view";
+        il = "issue list";
+      };
     };
   };
 }
