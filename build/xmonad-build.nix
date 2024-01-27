@@ -4,7 +4,7 @@ with pkgs;
 stdenv.mkDerivation {
   name = "xmonad-build";
   buildInputs = [
-    pkgconfig
+    pkg-config
     autoconf
     gcc
     stack
