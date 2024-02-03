@@ -27,7 +27,6 @@ export GOPATH=$TMPDIR/.go
 export GOCACHE=$TMPDIR/.go-build
 
 export PS1="\u@\h:\w\$ "
-export NIX_PATH="$NIX_PATH:nixpkgs-overlays=$HOME/.nixpkgs/overlays"
 
 if command -v zoxide &> /dev/null; then
     eval "$(zoxide init bash)"
