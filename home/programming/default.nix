@@ -10,7 +10,7 @@ in {
   home.packages = with pkgs; [
     nixfmt
     gdb
-    cloc
+    scc
     meld
     pv
     jq
