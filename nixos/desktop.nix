@@ -14,7 +14,7 @@
     }
   ];
 
-  fonts.fonts = [
+  fonts.packages = [
     pkgs.noto-fonts
   ];
 
