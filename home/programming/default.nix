@@ -72,6 +72,8 @@ in {
           "pr list --json number,title,headRefName,author,createdAt --template '{{range .}}{{tablerow (printf \"#%v\" .number | autocolor \"green\") .title (.headRefName | color \"cyan\") (.author.login | color \"yellow\") (timeago .createdAt) }}{{end}}'";
         iv = "issue view";
         il = "issue list";
+        stars =
+          "api user/starred --template '{{range .}}{{ tablerow (.full_name|color \"yellow\") .description}}{{end}}'";
       };
     };
   };
