@@ -67,13 +67,25 @@ in {
       pager = "cat";
       aliases = {
         pv = "pr view";
+        pvv = ''
+          pr view --json number,title,headRefName,author,createdAt,body,reviews --template \
+          '{{tablerow (printf "#%v" .number | autocolor "green") .title (.headRefName | color "cyan") (.author.login | color "yellow") (timeago .createdAt)}}{{tablerender}}
+          {{.body}}
+          {{tablerow "DATE" "REVIEWER" "STATE" "COMMENT"}}{{range .reviews}}{{tablerow (timeago .submittedAt) .author.login .state .body}}{{end}}
+          '
+        '';
         pl = "pr list";
-        pll =
-          "pr list --json number,title,headRefName,author,createdAt --template '{{range .}}{{tablerow (printf \"#%v\" .number | autocolor \"green\") .title (.headRefName | color \"cyan\") (.author.login | color \"yellow\") (timeago .createdAt) }}{{end}}'";
+        pll = ''
+          pr list --json number,title,headRefName,author,createdAt --template '{{tablerow "ID" "TITLE" "BRANCH" "AUTHOR" "CREATED AT"}}{{range .}}{{tablerow (printf "#%v" .number | autocolor "green") .title (.headRefName | color "cyan") (.author.login | color "yellow") (timeago .createdAt) }}{{end}}'
+        '';
         iv = "issue view";
         il = "issue list";
         stars =
           "api user/starred --template '{{range .}}{{ tablerow (.full_name|color \"yellow\") .description}}{{end}}'";
+        sr = "search repos";
+        srr = ''
+          search repos --sort stars --json fullName,description,stargazersCount --template '{{tablerow "NAME" "DESCRIPTION" "STARS"}}{{range .}}{{ tablerow (.fullName|color "yellow") .description (.stargazersCount | color "green")}}{{end}}'
+        '';
       };
     };
   };
