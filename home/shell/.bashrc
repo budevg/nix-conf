@@ -19,6 +19,7 @@ alias sudo='sudo env PATH=$PATH'
 alias d='docker -H unix://$HOME/scratch/docker.sock'
 alias v='vnc-mon.sh'
 alias gstack='stack --resolver global'
+alias nix='TERM=xterm nix'
 
 PATH=$HOME/.local/bin:$HOME/tools/bin:$PATH
 export TMPDIR=$HOME/scratch
