@@ -23,7 +23,7 @@ then
     exit 1
 fi
 
-sudo PATH=$PATH screen -d -m dockerd --experimental --data-root $DOCKER_DATA -H unix://$DOCKER_DATA.sock -p $DOCKER_DATA.pid -s $STORAGE $STORAGE_OPTS
+sudo env PATH=$PATH screen -d -m dockerd --experimental --data-root $DOCKER_DATA -H unix://$DOCKER_DATA.sock -p $DOCKER_DATA.pid -s $STORAGE $STORAGE_OPTS
 sleep 5
 sudo chown $USERNAME:$USERNAME $DOCKER_DATA.sock
 sudo umount $DEFAULT_DOCKER_SOCK || true
