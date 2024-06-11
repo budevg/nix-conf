@@ -3,6 +3,7 @@
 {
   home.packages = [
     pkgs.vlc
+    pkgs.mpv
     pkgs.simplescreenrecorder
     pkgs.gromit-mpx
     pkgs.feh
