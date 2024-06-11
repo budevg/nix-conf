@@ -1,4 +1,4 @@
-{ python3Packages }:
+{ python3Packages, wrapGAppsHook3 }:
 
 with python3Packages;
 buildPythonPackage rec {
@@ -10,6 +10,7 @@ buildPythonPackage rec {
     sha256 = "b6c70d54f8f4f9ffe565b92425389a790dadba0d9aca5852ff4ac13cd412b23a";
   };
 
+  nativeBuildInputs = [ wrapGAppsHook3 ];
   propagatedBuildInputs = [ pygobject3 dbus-python progressbar33 ];
   pipInstallFlags = "--no-dependencies";
   dontUseSetuptoolsCheck = true;
