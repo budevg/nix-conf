@@ -66,6 +66,9 @@ in {
       editor = "emacs";
       pager = "cat";
       aliases = {
+        rcs = ''
+          !gh repo clone "$1" -- --sparse --filter=blob:none
+        '';
         pv = "pr view";
         pvv = ''
           pr view --json number,title,headRefName,author,createdAt,body,reviews --template \
