@@ -17,6 +17,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias sudo='sudo env PATH=$PATH'
 alias d='docker -H unix://$HOME/scratch/docker.sock'
+alias k='kubectl'
+alias kx='kubectx'
+alias kn='kubens'
 alias v='vnc-mon.sh'
 alias gstack='stack --resolver global'
 alias nix='TERM=xterm nix'
