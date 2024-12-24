@@ -5,9 +5,13 @@
   services.printing.enable = true;
 
   # touchpad
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # sound
-  sound.enable = true;
   hardware.pulseaudio.enable = true;
+  services.pipewire.enable = false;
+
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 }

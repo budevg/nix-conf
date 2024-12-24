@@ -29,7 +29,7 @@ in stdenv.mkDerivation {
     librsvg
     libselinux
     libtiff
-    libungif
+    giflib
     libxml2
     m17n_lib
     ncurses
