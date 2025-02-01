@@ -4,6 +4,7 @@
   home.packages = [
     pkgs.vlc
     pkgs.mpv
+    pkgs.yt-dlp
     pkgs.simplescreenrecorder
     pkgs.gromit-mpx
     pkgs.feh
