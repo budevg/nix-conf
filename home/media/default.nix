@@ -3,7 +3,6 @@
 {
   home.packages = [
     pkgs.vlc
-    pkgs.mpv
     pkgs.yt-dlp
     pkgs.simplescreenrecorder
     pkgs.gromit-mpx
@@ -15,4 +14,13 @@
     pkgs.poppler_utils
     pkgs.evince
   ];
+
+  programs.mpv = {
+    enable = true;
+    config = {
+      keep-open = "yes";
+      force-window = "yes";
+      volume-max = 300;
+    };
+  };
 }
