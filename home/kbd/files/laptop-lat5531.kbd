@@ -1,0 +1,18 @@
+(defsrc
+  caps calc
+
+  nlck kp/ kp* kp-
+  kp7  kp8 kp9 kp+
+  kp4  kp5 kp6
+  kp1  kp2 kp3 kprt
+     kp0  kp.
+)
+
+(deflayer laptop
+  rctl pause
+  _    _    _     _
+  ins  home pgup  _
+  del  end  pgdn
+  left up   right _
+    down    down
+)
