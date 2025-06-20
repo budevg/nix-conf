@@ -8,7 +8,7 @@
   services.libinput.enable = true;
 
   # sound
-  hardware.pulseaudio.enable = true;
+  services.pulseaudio.enable = true;
   services.pipewire.enable = false;
 
   # bluetooth

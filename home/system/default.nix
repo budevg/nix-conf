@@ -2,7 +2,7 @@
 
 {
   home.packages = [
-    pkgs.dstat
+    pkgs.dool
     pkgs.file
     pkgs.htop
     pkgs.inotify-tools
