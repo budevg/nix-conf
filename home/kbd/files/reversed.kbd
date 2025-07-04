@@ -1,0 +1,45 @@
+(defsrc
+ caps
+ q w e
+ a s d
+                         rshift
+                    ralt rctrl
+)
+
+(defalias
+  rs (around rshift (layer-toggle rs))
+  rc (around rctrl (layer-toggle rc))
+  ra (layer-toggle ra)
+  )
+
+(deflayer default
+ lctrl
+ q w e
+ a s d
+                        @rs
+                    @ra @rc
+)
+
+(deflayer rs
+ lctrl
+ ins home pgup
+ del end  pgdn
+                         _
+                       _ _
+)
+
+(deflayer rc
+ lctrl
+ ins home pgup
+ del end  pgdn
+                         _
+                       _ _
+)
+
+(deflayer ra
+ lctrl
+ pause A-pause A-pgup
+ A-a   A-s     A-pgdn
+                         _
+                       _ _
+)
