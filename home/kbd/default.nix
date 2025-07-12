@@ -2,16 +2,16 @@
 
 with pkgs;
 let
-  kmonad-utils = stdenv.mkDerivation rec {
-    name = "kmonad-utils";
+  kanata-utils = stdenv.mkDerivation rec {
+    name = "kanata-utils";
     src = ./.;
     phases = [ "installPhase" ];
     installPhase = ''
       install -dm 755 $out/bin
-      install $src/kmonad.sh $out/bin
+      install $src/kanata.sh $out/bin
     '';
   };
 in {
-  home.packages = [ pkgs.kmonad kmonad-utils ];
-  home.file.".config/kmonad".source = ./files;
+  home.packages = [ pkgs.kanata kanata-utils ];
+  home.file.".config/kanata".source = ./files;
 }

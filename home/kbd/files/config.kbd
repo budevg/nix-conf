@@ -1,51 +1,70 @@
 (defcfg
-  input  (device-file "KBD_DEV")
-  output (uinput-sink "kmonad-kbd")
-  fallthrough true
-  allow-cmd false
-)
-
-#| --------------------------------------------------------------------------
-
-(deflayer name
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _    _
-)
-
-  -------------------------------------------------------------------------- |#
-
-(defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
-)
+ process-unmapped-keys yes
+ log-layer-changes no
+ ;;linux-dev /dev/input/by-id/usb-Logitech_USB_Receiver-if02-event-kbd
+ )
 
 (defalias
-  dl (tap-next (layer-switch qwerty) lctl)
-  al (tap-next (layer-switch arr) lctl)
-  )
-
-(deflayer qwerty
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  @al  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _              _              _    _    _    _
+  ralt (multi ralt (layer-while-held ralt))
+  rsft (multi rsft (layer-while-held rsft))
+  rctl (multi rctl (layer-while-held rctl))
+  upause (unmod pause)
+  esc (tap-hold 200 200 esc lrld)
 )
 
-(deflayer arr
-  _    _    _    _    _    _    _    _    _    _      _    _    _
-  _    _    _    _    _    _    _    _    _    _      _    _    _    _
-  _    _    _    _    _    _    _    _    _    insert home pgup _    _
-  @dl  _    _    _    _    _    _    _    up   delete end  pgdn _
-  _    _    _    _    _    _    _    left down right  _    _
-  _    _    _              _              _    _      _    _
+(defsrc
+ esc
+
+ caps
+
+ ralt rsft rctl
+
+ q w e
+ a s d
+)
+
+(deflayer default
+ @esc
+
+ lctrl
+
+ @ralt @rsft @rctl
+
+ _ _ _
+ _ _ _
+)
+
+(deflayer ralt
+ _
+
+ _
+
+ _ _ _
+
+ @upause pause pgup
+ _       _     pgdn
+)
+
+(deflayer rsft
+ _
+
+ _
+
+ _ _ _
+
+ ins _ _
+ del _  _
+
+)
+
+(deflayer rctl
+ _
+
+ _
+
+ _ _ _
+
+ ins home pgup
+ del end  pgdn
+
 )
