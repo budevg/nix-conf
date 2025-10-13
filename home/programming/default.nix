@@ -66,6 +66,7 @@ in {
       editor = "emacs";
       pager = "cat";
       aliases = {
+        rl = "repo list";
         rc = "repo clone";
         rcs = ''
           !gh repo clone "$1" -- --sparse --filter=blob:none
