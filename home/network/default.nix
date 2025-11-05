@@ -38,12 +38,15 @@ in {
           "browser.aboutConfig.showWarning" = false;
           "browser.aboutwelcome.didSeeFinalScreen" = true;
           "browser.download.dir" = "${config.home.homeDirectory}/scratch";
+          "browser.download.useDownloadDir" = false;
           "browser.download.folderList" = 2;
           "browser.newtabpage.activity-stream.feeds.topsites" = false;
           "browser.quitShortcut.disabled" = true;
+          "browser.translations.automaticallyPopup" = false;
           "extensions.activeThemeID" = "visionary-bold-colorway@mozilla.org";
           "extensions.pocket.enabled" = false;
           "media.videocontrols.picture-in-picture.video-toggle.enabled" = false;
+          "signon.rememberSignons" = false;
         };
       };
     };
