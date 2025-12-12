@@ -4,11 +4,16 @@ with python3Packages;
 buildPythonPackage rec {
   pname = "gcp";
   version = "0.2.1";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "b6c70d54f8f4f9ffe565b92425389a790dadba0d9aca5852ff4ac13cd412b23a";
   };
+
+  build-system = [
+    setuptools
+  ];
 
   nativeBuildInputs = [ wrapGAppsHook3 ];
   propagatedBuildInputs = [ pygobject3 dbus-python progressbar33 ];

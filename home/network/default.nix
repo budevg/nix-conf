@@ -4,7 +4,7 @@ let unstable = import <unstable> { };
 in {
   home.file = { ".ssh/config".source = ./.ssh/config; };
   home.packages = [
-    pkgs.transmission_3-gtk
+    pkgs.transmission_4-gtk
     pkgs.google-chrome
     pkgs.curl
     pkgs.tcpdump

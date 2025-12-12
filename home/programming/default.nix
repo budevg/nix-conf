@@ -39,20 +39,20 @@ in {
   programs.git = {
     lfs.enable = true;
     enable = true;
-    userName = "user name";
-    userEmail = "user@mail.com";
-    aliases = {
-      lg =
-        "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(magenta)<%an>%Creset' --abbrev-commit --date=relative";
-      l = "log --no-merges";
-      ll = "log --graph --date=short";
-      la = "shortlog -sne";
-      fp = "format-patch -s";
-      fpp = "format-patch -s --cover-letter";
-      c = "clean -fdxn";
-      cc = "clean -fdx";
-    };
-    extraConfig = {
+    settings = {
+      user.name = "user name";
+      user.email = "user@mail.com";
+      alias = {
+        lg =
+          "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(magenta)<%an>%Creset' --abbrev-commit --date=relative";
+        l = "log --no-merges";
+        ll = "log --graph --date=short";
+        la = "shortlog -sne";
+        fp = "format-patch -s";
+        fpp = "format-patch -s --cover-letter";
+        c = "clean -fdxn";
+        cc = "clean -fdx";
+      };
       core.pager = "cat";
       rebase.autosquash = true;
     };

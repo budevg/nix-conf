@@ -11,7 +11,7 @@
     pkgs.unzip
     pkgs.zip
     pkgs.ghostscript
-    pkgs.poppler_utils
+    pkgs.poppler-utils
     pkgs.evince
   ];
 
