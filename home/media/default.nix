@@ -21,6 +21,7 @@
       keep-open = "yes";
       force-window = "yes";
       volume-max = 300;
+      screenshot-dir = "~/scratch";
     };
   };
 }
