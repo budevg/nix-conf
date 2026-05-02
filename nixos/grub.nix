@@ -11,4 +11,5 @@
   boot.loader.grub.extraConfig = "terminal_input console; terminal_output console";
   # enable for uefi
   # boot.loader.efi.canTouchEfiVariables = true;
+  boot.extraModprobeConfig = "install algif_aead /bin/false";
 }
