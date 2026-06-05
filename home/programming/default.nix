@@ -8,7 +8,7 @@ let
   ];
 in {
   home.packages = with pkgs; [
-    nixfmt-classic
+    nixfmt
     gdb
     scc
     meld
